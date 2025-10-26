@@ -1,7 +1,5 @@
 import java.util.Random;
 import java.util.Arrays;
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
         int racha = 0; //Inicializamos  variables de racha y aleatorio y arrays
@@ -16,11 +14,11 @@ public class Main {
         int maxRacha = 1;
         int actual = 1;
         for (int i = 0; i < numeros.length ; i++) {
-            if (numeros[i] == numeros [i + 1]){
+            if (numeros[i] == numeros [i-1]){
                 actual++;}
             else{
                     actual = 1;}
-                if(actual > maxRacha); {
+                if(actual > maxRacha) {
                 maxRacha = actual;
             }
 
