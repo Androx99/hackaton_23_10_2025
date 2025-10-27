@@ -1,11 +1,10 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
+public class matriz_2 {
     public static void main(String[] args) {
-        int[][] mapa = new int[5][5];
+        char[][] mapa = new char[5][5];
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                mapa[i][j] = 0;
+                mapa[i][j] = 'o';
+                mapa[2][2] = 'X';
             }
         }
 // Mostrar
