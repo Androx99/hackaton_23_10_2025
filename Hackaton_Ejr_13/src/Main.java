@@ -11,11 +11,11 @@ public class Main {
         char[] palabra = palabra_user.toLowerCase().toCharArray();
         //BUCLE PARA CONTAR LAS LETRAS
         for (int i=0;i<palabra.length;i++){
-            if (Character.isLetter(palabra[i])){
+            if (palabra[i]=='a' || palabra[i]=='e' || palabra[i]=='i' || palabra[i]=='o' || palabra[i]=='u'){
                 cont_letras++;
             }
         }
         //MOSTRAMOS EL NUMERO DE LETRAS AL USUARIO
-        System.out.println("La palabra tiene "+cont_letras+" letras");
+        System.out.println("La palabra tiene "+cont_letras+" vocales");
     }
 }
