@@ -2,29 +2,42 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        //INCIALIZAR VARIABLES
+        Scanner sc = new Scanner(System.in); //sc nombre escaner
         int cont_letras= 0;
+        int num_aciertos=0;
         char letra_user;
-        boolean acierto = false;
-        String palabra_adivinar =  "supercalifrajilisticoespialidoso";
+        //PALABRA A ADIVINAR
+        String palabra_adivinar =  "casa";
         char[] palabra = palabra_adivinar.toLowerCase().toCharArray();
         for (int i=0;i<palabra.length;i++){
             if (Character.isLetter(palabra[i])){
                 cont_letras++;
             }
         }
+        //RELLENAR ARRAY PARA EL USUARIO
         char[] palabra_usuario = new char [cont_letras];
         char relleno = '_';
         for (int i=0;i<palabra_usuario.length;i++){
             palabra_usuario[i]=relleno;
         }
-        do {
+        //PARTE DEL JUEGO
+        do { //HASTA QUE SE ACIERTE LA PALABRA
             System.out.print("Introduce una letra: ");
             letra_user = sc.next().charAt(0);
+            //COMPROBAR SI EL USUARIO A ACERTADO
             for(int i=0;i<palabra.length;i++){
-                if pablero[i]
+                if (palabra[i]==letra_user && palabra_usuario[i]!=letra_user){
+                    palabra_usuario[i]=palabra[i];
+                    num_aciertos++;
+                }
             }
-        }while (acierto == false);
+            //MOSTRAR ACIERTOS AL USUARIO
+            for (int i=0;i<palabra_usuario.length;i++){
+                System.out.print(palabra_usuario[i] + " ");
+            }
+        }while (num_aciertos!=cont_letras);
+        System.out.println("Enorabuena has acertado!!");
 
     }
 }
