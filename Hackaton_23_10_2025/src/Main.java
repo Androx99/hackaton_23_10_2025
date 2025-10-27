@@ -19,8 +19,8 @@ public class Main {
         //Ahora mostraremos el array por pantalla
 
         System.out.println("Los primeros 15 numeros de la serie de Fibonacci son:");
-        for (int num : fibonacci) {  // Usamos un bucle "for-each" para recorrer el array
-            System.out.print(num + " ");  // Imprimimos cada número seguido de un espacio en la misma línea
+        for (int i= 0;i <fibonacci.length; i++) {  // Usamos un bucle "for-each" para recorrer el array
+            System.out.print(fibonacci[i] + " ");  // Imprimimos cada número seguido de un espacio en la misma línea
         }
     }
 }
